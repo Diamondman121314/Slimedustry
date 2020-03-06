@@ -1,0 +1,19 @@
+name: Slimedustry
+main: me.diamondman121314.Slimedustry.Main
+version: 1.3.0
+author: j0ach1mmall3, Diamondman121314
+description: An addon for Slimefun which adds cool new Industrial Items to your game!
+depend: [Slimefun]
+api-version: 1.14
+
+commands:
+    Slimedustry:
+        description: Slimedustry commands.
+        aliases: sd
+permissions:
+    Slimedustry.reload:
+        description: Access to /slimedustry reload
+        default: op
+    Slimedustry.charge:
+        description: Access to /slimedustry charge {PlayerName}
+        default: op
