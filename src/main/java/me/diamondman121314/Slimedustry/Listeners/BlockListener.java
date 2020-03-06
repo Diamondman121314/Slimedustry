@@ -3,7 +3,7 @@ package me.diamondman121314.Slimedustry.Listeners;
 import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Random;
-import me.diamondman121314.Slimedustry.Main;
+import me.diamondman121314.Slimedustry.Slimedustry;
 import io.github.thebusybiscuit.cscorelib2.item.CustomItem;
 import me.mrCookieSlime.Slimefun.api.Slimefun;
 import org.bukkit.Bukkit;
@@ -22,7 +22,6 @@ import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.block.BlockDispenseEvent;
 import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.block.LeavesDecayEvent;
-import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.Plugin;
 
@@ -30,7 +29,7 @@ import org.bukkit.plugin.Plugin;
 public class BlockListener implements Listener {
   Plugin plugin;
 
-  public BlockListener(Main plugin) {
+  public BlockListener(Slimedustry plugin) {
     this.plugin = (Plugin)plugin;
     plugin.getServer().getPluginManager().registerEvents(this, (Plugin)plugin);
   }

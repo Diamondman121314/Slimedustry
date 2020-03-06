@@ -59,7 +59,7 @@ public class Setup {
   static SlimefunItemStack uu3;
   static SlimefunItemStack td2;
 
-  public static void setupMisc(Main main) {
+  public static void setupMisc(me.diamondman121314.Slimedustry.Slimedustry main) {
     Slimedustry = new Category(new NamespacedKey(main, "slimedustry"), new CustomItem(Material.BEACON, "&7Slimedustry"));
     Dusts = new Category(new NamespacedKey(main, "dusts"), new CustomItem(Material.SUGAR, "&7Dusts"));
     Plates = new Category(new NamespacedKey(main, "plates"), new CustomItem(Material.MAP, "&7Plates"));
@@ -71,7 +71,7 @@ public class Setup {
     ldType = new RecipeType(new NamespacedKey(main, "leaves_decay_material"), new CustomItem(Material.OAK_LEAVES, "&bLeaves Decay", "", "&aObtain this item when Leaves decay (can be any leaves)"));
   }
 
-  public static void setupItems(Main main) {
+  public static void setupItems(me.diamondman121314.Slimedustry.Slimedustry main) {
     iw = new SlimefunItemStack("INDUSTRIAL_WORKBENCH", Material.CRAFTING_TABLE, "&bIndustrial Crafting Table", "", "&a&oUsed for Industrial Crafting");
     tank = new SlimefunItemStack("TANK", Material.WHITE_STAINED_GLASS, "&6Tank", "", "&a&oStores Liquids");
     rg = new SlimefunItemStack("REINFORCED_GLASS", Material.GLASS, "&bReinforced Glass");
@@ -201,7 +201,7 @@ public class Setup {
     cvItem.register(main);
   }
 
-  public static void setupResearches(Main main) {
+  public static void setupResearches(me.diamondman121314.Slimedustry.Slimedustry main) {
     Research iwResearch = new Research(new NamespacedKey(main, "industrial_workbench"), 1001, "Industrial Crafting Table", 8);
     Research tankResearch = new Research(new NamespacedKey(main, "tank"), 1002, "Liquid Storage", 7);
     Research rgResearch = new Research(new NamespacedKey(main, "reinforced_glass"), 1003, "Reinforced Glass", 10);

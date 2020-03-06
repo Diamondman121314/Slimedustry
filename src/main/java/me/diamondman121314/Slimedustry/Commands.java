@@ -14,7 +14,7 @@ import org.bukkit.plugin.Plugin;
 public class Commands implements CommandExecutor {
   Plugin plugin;
 
-  public Commands(Main plugin) {
+  public Commands(Slimedustry plugin) {
     this.plugin = (Plugin)plugin;
   }
 

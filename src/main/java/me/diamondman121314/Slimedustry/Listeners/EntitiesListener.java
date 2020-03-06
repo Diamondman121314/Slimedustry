@@ -3,7 +3,7 @@ package me.diamondman121314.Slimedustry.Listeners;
 import java.text.DecimalFormat;
 import java.util.HashMap;
 import java.util.List;
-import me.diamondman121314.Slimedustry.Main;
+import me.diamondman121314.Slimedustry.Slimedustry;
 import me.mrCookieSlime.Slimefun.api.Slimefun;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
@@ -26,7 +26,7 @@ import org.bukkit.util.Vector;
 public class EntitiesListener implements Listener {
   private static HashMap<Player, Vector> Locations = new HashMap<>();
 
-  public EntitiesListener(Main plugin) {
+  public EntitiesListener(Slimedustry plugin) {
     plugin.getServer().getPluginManager().registerEvents(this, (Plugin)plugin);
     this.plugin = (Plugin)plugin;
   }

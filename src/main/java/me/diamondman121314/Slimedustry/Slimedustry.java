@@ -5,7 +5,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class Main extends JavaPlugin implements Listener, SlimefunAddon {
+public class Slimedustry extends JavaPlugin implements Listener, SlimefunAddon {
   public void onEnable() {
     if (getServer().getPluginManager().isPluginEnabled("Slimefun")) {
       System.out.println("[" + getName() + "] " + getName() + " v" + getDescription().getVersion() + " has been enabled!");

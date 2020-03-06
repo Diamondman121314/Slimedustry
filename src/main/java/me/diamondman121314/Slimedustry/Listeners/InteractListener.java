@@ -4,7 +4,7 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import me.diamondman121314.Slimedustry.Main;
+import me.diamondman121314.Slimedustry.Slimedustry;
 import me.diamondman121314.Slimedustry.Setup;
 import io.github.thebusybiscuit.cscorelib2.inventory.InvUtils;
 import io.github.thebusybiscuit.cscorelib2.item.CustomItem;
@@ -37,7 +37,7 @@ import org.bukkit.plugin.Plugin;
 public class InteractListener implements Listener {
   Plugin plugin;
 
-  public InteractListener(Main plugin) {
+  public InteractListener(Slimedustry plugin) {
     plugin.getServer().getPluginManager().registerEvents(this, (Plugin)plugin);
     this.plugin = (Plugin)plugin;
   }
