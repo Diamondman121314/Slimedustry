@@ -16,25 +16,25 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.Plugin;
 
 public class InventoryListener implements Listener {
-  public InventoryListener(Slimedustry plugin) {
-    plugin.getServer().getPluginManager().registerEvents(this, (Plugin)plugin);
-  }
-  @EventHandler(priority = EventPriority.LOWEST)
-  public void onInventoryInteract(InventoryClickEvent e) {
-    Player p = (Player)e.getWhoClicked();
-    Inventory i = e.getInventory();
-    if (i.getType() == InventoryType.DISPENSER) {
-      Dispenser d = (Dispenser)i.getHolder();
-      if (d.getBlock().getRelative(BlockFace.UP).getType() == Material.WHITE_STAINED_GLASS)
-        e.setCancelled(true);
+    public InventoryListener(Slimedustry plugin) {
+        plugin.getServer().getPluginManager().registerEvents(this, (Plugin)plugin);
     }
-  }
+    @EventHandler(priority = EventPriority.LOWEST)
+    public void onInventoryInteract(InventoryClickEvent e) {
+        Player p = (Player)e.getWhoClicked();
+        Inventory i = e.getInventory();
+        if (i.getType() == InventoryType.DISPENSER) {
+            Dispenser d = (Dispenser)i.getHolder();
+            if (d.getBlock().getRelative(BlockFace.UP).getType() == Material.WHITE_STAINED_GLASS)
+                e.setCancelled(true);
+        }
+    }
 
-  @EventHandler(priority = EventPriority.LOWEST)
-  public void onInventoryMove(InventoryMoveItemEvent e) {
-    Inventory i = e.getSource();
-    ItemStack moved = e.getItem();
-    if (moved.getType() == Material.TERRACOTTA && moved.hasItemMeta() && (moved.getItemMeta().getDisplayName().equalsIgnoreCase("&bWater") || moved.getItemMeta().getDisplayName().equalsIgnoreCase("&6Lava")) && i.getType() == InventoryType.DISPENSER)
-      e.setCancelled(true);
-  }
+    @EventHandler(priority = EventPriority.LOWEST)
+    public void onInventoryMove(InventoryMoveItemEvent e) {
+        Inventory i = e.getSource();
+        ItemStack moved = e.getItem();
+        if (moved.getType() == Material.TERRACOTTA && moved.hasItemMeta() && (moved.getItemMeta().getDisplayName().equalsIgnoreCase("&bWater") || moved.getItemMeta().getDisplayName().equalsIgnoreCase("&6Lava")) && i.getType() == InventoryType.DISPENSER)
+            e.setCancelled(true);
+    }
 }
