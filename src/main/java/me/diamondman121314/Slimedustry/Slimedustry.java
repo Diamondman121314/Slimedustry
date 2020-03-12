@@ -11,7 +11,6 @@ public class Slimedustry extends JavaPlugin implements SlimefunAddon {
     public void onEnable() {
         if (!getServer().getPluginManager().isPluginEnabled("Slimefun")) {
             getLogger().severe("Please install Slimefun, as without it, the plugin will not work!\nYou can download Slimefun from https://thebusybiscuit.github.io/builds/TheBusyBiscuit/Slimefun4/master/!");
-            getLogger().info("");
             getServer().getPluginManager().disablePlugin(this);
             return;
         }
